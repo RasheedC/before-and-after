@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Before and After</title>
+</head>
+<body>
+  
+<h2>Number Methods</h2>
+<p>toExponential() returns a string, with the number rounded and written using exponential notation.</p>
+
+<p>An optional parameter defines the number of digits behind the decimal point.</p>
+
+<p id="expo"></p>
+
+<script>
+let x = 9.656;
+document.getElementById("expo").innerHTML =
+  x.toExponential() + "<br>" + 
+  x.toExponential(2) + "<br>"
+</script>
+
+<p>The toFixed() method rounds a number to a given number of digits.</p>
+<p>For working with money, toFixed(2) is perfect.</p>
+
+<p id="fixed"></p>
+
+<script>
+let x = 9.656;
+document.getElementById("fixed").innerHTML =
+  x.toFixed(0) + "<br>" +
+  x.toFixed(2) + "<br>"
+</script>
+
+<h2>String Methods</h2>
+<p>The length of the string is:</p>
+<p id="length"></p>
+
+<script>
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("length").innerHTML = text.length;
+</script>
+
+<p>The substring() method extract a part of a string and returns the extracted parts in a new string:</p>
+
+<p id="sub"></p>
+
+<script>
+let str = "Apple, Banana, Kiwi";
+document.getElementById("sub").innerHTML = str.substring(7,13);
+</script>
+
+<h2>Array Methods</h2>
+<p>The pop() method removes the last element from an array.</p>
+
+<p id="pop1"></p>
+<p id="pop2"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("pop1").innerHTML = fruits;
+fruits.pop();
+document.getElementById("pop2").innerHTML = fruits;
+</script>
+
+<p>The push() method appends a new element to an array:</p>
+
+<p id="push"></p>
+<p id="push2"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("push1").innerHTML = fruits;
+fruits.push("Kiwi");
+document.getElementById("push").innerHTML = fruits;
+</script>
+
+<h2>Object Methods</h2>
+<p>Object.values()</p>
+<script>
+const obj = {  a: 'TOM',  b: 'JONAS'  };  
+document.write(Object.values(obj));
+
+
+
+</script>
+</body>
+</html>
